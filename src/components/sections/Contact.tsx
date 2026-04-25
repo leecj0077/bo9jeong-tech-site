@@ -103,7 +103,7 @@ export default function Contact() {
                     type="text" 
                     required
                     placeholder="홍길동" 
-                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium" 
+                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium text-slate-900" 
                   />
                 </div>
                 <div className="space-y-2">
@@ -112,7 +112,7 @@ export default function Contact() {
                     name="company" // 💡 템플릿의 {{company}}와 매칭
                     type="text" 
                     placeholder="보구정디벨롭" 
-                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium" 
+                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium text-slate-900" 
                   />
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                     type="tel" 
                     required
                     placeholder="010-1234-5678" 
-                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium" 
+                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium text-slate-900" 
                   />
                 </div>
                 <div className="space-y-2">
@@ -135,7 +135,7 @@ export default function Contact() {
                     type="email" 
                     required
                     placeholder="partner@bo9jeong.com" 
-                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium" 
+                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-300 font-medium text-slate-900" 
                   />
                 </div>
               </div>
@@ -168,14 +168,14 @@ export default function Contact() {
                   required
                   rows={4} 
                   placeholder="아이디어의 핵심 기능이나 원하시는 일정을 자유롭게 적어주세요." 
-                  className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all resize-none placeholder:text-slate-300 font-medium"
+                  className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all resize-none placeholder:text-slate-300 font-medium text-slate-900"
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-5 bg-indigo-600 text-white font-black rounded-[24px] hover:bg-indigo-700 shadow-2xl shadow-indigo-600/30 transition-all flex items-center justify-center gap-3 group disabled:bg-slate-400 disabled:shadow-none"
+                className="w-full py-5 bg-indigo-600 text-white font-black rounded-[24px] hover:bg-indigo-700 shadow-2xl shadow-indigo-600/30 transition-all flex items-center justify-center gap-3 group disabled:bg-slate-400 disabled:shadow-none text-slate-900"
               >
                 {isSubmitting ? (
                   <>
