@@ -13,8 +13,13 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   // 💡 기본 타이틀 및 템플릿 설정
   title: {
-    default: "보구정디벨롭 | 하이엔드 엔지니어링 & AI 솔루션",
+    default: "보구정디벨롭 | Web·App·AI 전문 개발 파트너",
     template: "%s | 보구정디벨롭",
+  },
+  verification: {
+    other: {
+      "naver-site-verification": "c1d71a98c761bf7fdf7cd573f33941cbcf6e46d4",
+    },
   },
   // 💡 검색 엔진 설명 문구 (핵심 키워드 포함)
   description: "보구정디벨롭은 지능형 관제 시스템, 비정형 데이터 OCR, 하이엔드 웹/앱 구축 전문 엔지니어링 그룹입니다. 14일/30일/90일 맞춤형 구축 프로토콜로 아이디어를 무결점의 현실로 구현합니다.",
