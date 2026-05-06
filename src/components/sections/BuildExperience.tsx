@@ -14,13 +14,15 @@ const projects = [
     accent: "bg-amber-500"
   },
   {
-    title: "현장 밀착형 지능형 관리 시스템",
+    title: "동영상 교육 온라인 이수 시스템",
     client: "제주도내 공공기관 및 관공서",
-    desc: "제주 지역 특성에 맞춘 시설물 관리 및 활동 보고 앱입니다. 위치 기반 정보와 모바일 기능을 결합하여 현장 업무의 효율을 극대화합니다.",
-    features: ["위치 기반 실시간 보고", "지능형 시설물 이력 관리", "오프라인 모드 데이터 동기화"],
+    desc: "공공기관 직무 교육 및 법정 의무 교육을 위한 통합 온라인 학습 플랫폼입니다. 안정적인 스트리밍 환경과 엄격한 이수 관리 기능을 통해 비대면 교육 운영의 신뢰성을 보장합니다.",
+    features: [
+        "배속 방지 및 진도율 정밀 체크",        "학습 완료 후 자동 이수증 발급",        "관리자 전용 대시보드 및 통계 리포트"
+    ],
     images: ["/samples/edu1.png", "/samples/edu2.png"],
-    accent: "bg-indigo-600"
-  }
+    accent: "bg-blue-700"
+}
 ];
 
 const ProjectCard = ({ item, idx }: { item: typeof projects[0], idx: number }) => {
