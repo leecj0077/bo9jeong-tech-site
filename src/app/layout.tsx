@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -83,7 +84,9 @@ export default function RootLayout({
       
       {/* 💡 변경: bg-slate-950 -> bg-white, text-slate-50 -> text-slate-900 */}
       <body className={`${inter.className} bg-white text-slate-900 min-h-screen flex flex-col antialiased`}>
+      <Suspense fallback={null}>
       <GlobalLoader />
+      </Suspense>
         <Header />
         <main className="flex-1 flex flex-col w-full z-10 relative">
           {children}
