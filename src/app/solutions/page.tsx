@@ -3,6 +3,7 @@
 import SolutionHero from "@/components/sections/SolutionHero";
 import SolutionList from "@/components/sections/SolutionList";
 import DeploymentInquiry from "@/components/sections/DeploymentInquiry";
+import BusinessFields from "@/components/sections/BusinessFramework";
 
 /**
  * 🚀 Solutions Hub Page
@@ -22,17 +23,8 @@ export default function SolutionsMainPage() {
       */}
       <SolutionHero />
 
-      {/* [PHASE 02] 
-        메인 페이지의 <Solutions /> 그리드를 재활용하지 않고, 
-        기술의 깊이를 보여주는 수직형 내비게이션 리스트 
-      */}
-      <SolutionList />
-
-      {/* [PHASE 03] 
-        단순 상담 신청이 아닌, 
-        '시스템 배포 프로토콜' 컨셉의 하이엔드 인쿼리 
-      */}
-      <DeploymentInquiry />
+      
+      <BusinessFields />
 
     </main>
   );

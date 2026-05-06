@@ -26,10 +26,15 @@ export default function Header() {
     return () => clearInterval(interval);
   }, []);
 
+  // const navLinks = [
+  //   { name: "Solutions", href: "/solutions" },
+  //   { name: "Case Studies", href: "/case-studies" },
+  //   { name: "Tech & DNA", href: "/tech-dna" },
+  // ];
   const navLinks = [
-    { name: "Solutions", href: "/solutions" },
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "Tech & DNA", href: "/tech-dna" },
+    { name: "사업 분야", href: "/solutions" },   // 기존: Solutions
+    { name: "구축 경험", href: "/case-studies" }, // 기존: Case Studies
+    { name: "기술 이야기", href: "/tech-dna" },     // 기존: Tech & DNA
   ];
 
   return (

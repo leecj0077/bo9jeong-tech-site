@@ -4,6 +4,8 @@ import "./globals.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FloatingKakao from "@/components/layout/FloatingKakao";
+import GlobalLoader from "@/components/layout/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -78,12 +80,16 @@ export default function RootLayout({
   return (
     // 💡 변경: className="dark" 제거
     <html lang="ko">
+      
       {/* 💡 변경: bg-slate-950 -> bg-white, text-slate-50 -> text-slate-900 */}
       <body className={`${inter.className} bg-white text-slate-900 min-h-screen flex flex-col antialiased`}>
+      <GlobalLoader />
         <Header />
         <main className="flex-1 flex flex-col w-full z-10 relative">
           {children}
         </main>
+        {/* 💡 전역 플로팅 버튼 배치 */}
+        <FloatingKakao />
         <Footer />
       </body>
     </html>
