@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import ThreadAnimation from "@/components/animations/ThreadAnimation";
+import Link from "next/link";
 
 export default function MainIntro() {
   return (
@@ -30,12 +31,16 @@ export default function MainIntro() {
           </p>
           
           <div className="mt-12 flex flex-col md:flex-row gap-4 justify-center font-bold">
+          <Link href="/contact">
             <button className="px-10 py-5 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200">
               구축 상담 시작하기
             </button>
+            </Link>
+            <Link href="/solutions">
             <button className="px-10 py-5 bg-white text-slate-900 border border-slate-200 rounded-2xl hover:bg-slate-50 transition-all">
-              주요 실적 보기
+              사업 분야 보기
             </button>
+            </Link>
           </div>
         </motion.div>
       </div>

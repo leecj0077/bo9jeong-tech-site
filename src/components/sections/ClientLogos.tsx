@@ -1,30 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const PROJECT_HISTORY = [
-  { name: "LG전자", label: "Global Platform" },
-  { name: "삼성중공업", label: "AI Vision System" },
-  { name: "SK하이닉스", label: "Infrastructure" },
-  { name: "대한항공", label: "Enterprise Web" },
-  { name: "롯데시네마", label: "Service Platform" },
-  { name: "롯데렌터카", label: "Booking System" },
-  { name: "SBS 스포츠", label: "Media Stream" },
-  { name: "수협", label: "Media Stream" },
-  { name: "채널A", label: "Broadcasting" },
-  { name: "연합TV", label: "News Platform" },
-  { name: "제주시청", label: "Public Service" },
-  { name: "제주관광공사", label: "Tourism Portal" },
+  { name: "LG전자", slug: "lg", label: "Global Platform" },
+  { name: "삼성중공업", slug: "samsung", label: "AI Vision System" },
+  { name: "SK하이닉스", slug: "skhynix", label: "Infrastructure" },
+  { name: "대한항공", slug: "koreanair", label: "Enterprise Web" },
+  { name: "롯데시네마", slug: "lotte", label: "Service Platform" },
+  { name: "롯데렌터카", slug: "lottebizcar", label: "Booking System" },
+  { name: "SBS 스포츠", slug: "sbs", label: "Media Stream" },
+  { name: "수협", slug: "suhyup", label: "Media Stream" },
+  { name: "채널A", slug: "channela", label: "Broadcasting" },
+  { name: "연합TV", slug: "ytv", label: "News Platform" },
+  { name: "제주관광공사", slug: "jeju", label: "Tourism Portal" },
 ];
 
 export default function ClientLogos() {
+  // 무한 롤링을 위해 배열 복사
   const duplicatedProjects = [...PROJECT_HISTORY, ...PROJECT_HISTORY, ...PROJECT_HISTORY];
 
   return (
-    // 💡 1. 배경색을 bg-slate-50으로 변경하여 섹션 간 구분감을 줍니다.
     <section className="py-24 bg-slate-50 overflow-hidden border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-16 text-center">
-        <p className="text-sm font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
+        <p className="text-sm font-black text-slate-400 uppercase tracking-[0.3em] mb-4">
           Project Experience with Industry Leaders
         </p>
         <h3 className="text-xl md:text-2xl font-medium text-slate-500">
@@ -33,7 +33,7 @@ export default function ClientLogos() {
       </div>
 
       <div className="relative flex w-full">
-        {/* 💡 2. 배경색에 맞춰 페이드 마스크의 그라데이션 색상도 from-slate-50으로 수정 */}
+        {/* 페이드 마스크 */}
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
@@ -49,14 +49,17 @@ export default function ClientLogos() {
           {duplicatedProjects.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center group"
+              className="flex flex-col items-center justify-center group shrink-0"
             >
-              <div className="h-10 flex items-center justify-center grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110">
-                <span className="text-2xl lg:text-4xl font-black tracking-tighter text-slate-950">
-                  {item.name}
-                </span>
+              <div className="relative h-12 w-32 lg:h-16 lg:w-40 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110">
+                <Image
+                  src={`/logos/${item.slug}.png`} // 💡 파일 확장자는 실제에 맞게 수정하세요 (.svg 권장)
+                  alt={item.name}
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <span className="mt-3 text-[10px] font-bold text-indigo-500 opacity-0 group-hover:opacity-100 transition-all duration-300 uppercase tracking-[0.2em] translate-y-2 group-hover:translate-y-0">
+              <span className="mt-3 text-[10px] font-black text-indigo-500 opacity-0 group-hover:opacity-100 transition-all duration-300 uppercase tracking-[0.2em] translate-y-2 group-hover:translate-y-0">
                 {item.label}
               </span>
             </div>
