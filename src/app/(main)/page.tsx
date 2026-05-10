@@ -9,6 +9,7 @@ import PartnerLogos from "@/components/sections/PartnerLogos";
 import Contact from "@/components/sections/Contact";
 import TechStack from "@/components/sections/TechStack";
 import ClientLogos from "@/components/sections/ClientLogos";
+import Certifications from "@/components/sections/Certifications";
 
 export default function Home() {
   return (
@@ -32,7 +33,10 @@ export default function Home() {
       {/* 6. 함께하는 파트너: 관공서 및 주요 협력사 (기존 ClientLogos) */}
       <ClientLogos />
 
-      {/* 7. 상담 신청: 24시간 내 회신 프로토콜 (Contact 유지) */}
+      {/* 7. 보구정 인증서 추가 */}
+      <Certifications />
+
+      {/* 8. 상담 신청: 24시간 내 회신 프로토콜 (Contact 유지) */}
       <Contact />
     </main>
   );
